@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score,precision_score, recall_score, f1_score
 
 # Website settings
 st.set_page_config(
@@ -77,8 +77,11 @@ def train_model():
     # Calculate test accuracy
     predictions = model.predict(X_test)
     accuracy = accuracy_score(y_test, predictions)
+    precision = precision_score(y_test, y_predictions)
+    recall = recall_score(y_test, y_predictions)
+    f1-Score = f1_score(y_test, y_predictions)
 
-    return vectorizer, model, accuracy
+    return vectorizer, model, accuracy,precision,recall,fi-score
 
 
 # Train the model
