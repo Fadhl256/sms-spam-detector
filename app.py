@@ -81,7 +81,7 @@ def train_model():
     recall = recall_score(y_test, y_predictions)
     f1__score = f1_score(y_test, y_predictions)
 
-    return vectorizer, model, accuracy,precision,recall,fi-score
+    return vectorizer, model, accuracy,precision,recall,f1__score
 
 
 # Train the model
